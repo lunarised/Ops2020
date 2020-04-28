@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Operations and Security portfolio}
+\author{James McKenzie}
+
+\maketitle
+This a portfolio of work that I have completed and intend to complete in Semester 1 of 2020, as part of my work in the 
+Operations and Security team in Project 2
+\medskip
+This semester, my primary goal is to complete some AWS certifications or some Azure certifications. Im mostly looking into the 
+Operations certifications, although some of the software engineering and security ones also look pretty good. My other goal
+is to get a better understanding of CI/CD and learn some CI/CD tools such as Spinnaker and Jenkins. This also gives me an opportunity
+to learn more of the Rust programming language, as that is one of the rising stars in programming; Being used by both Systems administrators,
+and Software developers both. I can use test programs to test my CI/CD testing
+
+
+\section{Week 01}
+The first week of Class is mostly uneventful, but i will document the first week,  just for the sake of completeness. 
+
+
+\subsection{Class 1}
+
+Today we mainly just set up our machines for the semester. A lot of people seemed somewhat interested in OPs, which i guess is good.
+Theres talk of maybe visiting a datacenter and getting some AWS / Azure qualifications, which I am all up for
+
+\subsection{Class 2}
+Today we got all the new people into the OPs group. Seem like a good bunch. I showed them around the documentation, got some of them added
+into the gitlab documentation repo, and gave a rough overview on what we actually do in the ops department, re: keeping gitlab open, and helping
+other projects with any servers or CI/CD that they may need. Rob also came to bother us regarding some issues with both gitlab having certificate
+errors, and the server upstairs having some problems mapping its storage. I took a little look at both of these problems, and decided that 
+the git issue is more important as many lecturers use gitlab to teach their classes.
+
+
+\section{Week 02}
+\subsection{Class 1}
+Today, as faisal and matt were absent, I held a meeting with everyone just to see what everyone is interested in. We have
+a lot of people interested in networking, which is a welcome change from neither me or Matt understanding the first thing about
+basic networks. It seems a fair few of them aren't overly comfortable in either Linux or Windows Server operating systems, which
+I guess they will learn as they work through the Ops group. I know that I definitely want to do something regarding CI/CD as a main
+project this semester, and Faisal said he would give me some software to look at in the coming days. I also ended up renewing all of
+the certificates today, which took up a lot of time, as the documentation for the cert renewals is broken. There are chain files, which
+I still do not understand, which do not work, but I plan to give them a shot later on this week.  It prevents people logging into gitlab
+via the automatic authentication via the idp servers. 
+\subsection{Class 2}
+Today was spent trying to diagnose some issues regarding gitlab, that I definitely over engineered. We had a message from a student
+letting me know that he could see a bunch of other repos. I spent about 4 hours trying to brute force find the cause of this, by checking
+file permissions and going through pages of bug reports on google regarding this issue. I then came to my senses, and checked what repos
+the student was supposed to be able to access, and then I found out that all students in his class were able to access eachothers repos, 
+which seems to be the intended behaviour, so I spent the day just going on a wild goose chase looking for bugs and issues that weren't there
+
+\section{Week 03}
+\subsection{Class 1}
+Today Faisal talked to me about a CI/CD program called Spinnaker, which is one of the heavy hitters in the CI/CD world. I had a look
+through it today, and tried installing it on the Polytech computers. I ran into a large number of issues with the install, however, I did
+manage to install a package called Spinnaker on my laptop. It was about this time that I realised i was not doing the install right, as its
+supposed to be hosted on a cloud platform like AWS or Azure. I decided that I needeed to do some more research before i continued
+\subsection{Class 2}
+
+\section{Week 04}
+\subsection{Class 1}
+This week faisal wanted us to get the Gitlab CI/CD working, which I gave a good attempt, although, I ran into some issues regarding
+installing the runner. I also had to spend a while explaining exit codes to my other team members (explaining that all programs return
+an integer to the shell, a 0 if the program ran correctly, or a positive integer if the program exited) I think i will get it working next
+session though as i made a breakthrough with the gitlab runner.
+\subsection{Class 2}
+Today I got the gitlab runner working, turns out most of my issues were due to saving the gitlab runner into a drive that wasnt the 
+root drive (in this case C:/) and it didn't have access to the \$PATH for some reason or another. I then ran into the problem that my program
+would only ever return a success state, however, I fixed this by realising i am not as good at Python as i had expected. I then got bothered
+my Rob to try and fix the IDP certificates, so I did some more research on how Chain Files work, But I will try fix this next time I come in
+\section{Week 05}
+\subsection{Class 1}
+So today i "Fixed" the IDP situation through some very roundabout methods, although, IDP is still refusing to work with the gitlab server, I
+think this is still an issue with chain files, as I don't really know what certs I am supposed to chain together due to lack of documentation.
+The cert generation scripts on the servers are also binaries and not interpreted source code, for whatever reason, which means I have absolutely
+no way of determining how to set up the chain files. Thankfully, we are planning to retire the gitlab service soon, and this won't be a problem
+again, but I asked a few people in the OPs group if they could have a look at it at some point when they have time, as maybe between us all, 
+one of us may be able to crack this problem.
+\subsection{Class 2}
+Personal Challenge Day! I managed to brick my laptop which had a large number of private keys that I need to access my personal servers.
+So I spent today utilising different methods to get the data off my laptop. A big issue is that I encrypt my data at an operating system
+level, which meant I needed to use my decrypting programs to get the data back. I achieved this by using a Live USB of Arch Linux (which
+coincidentally, is the Operating System that was on my latop), to set up a environment in ram, to mount my drives, do a decrypt on those
+mount points, and then change the root into the original root of my operating system. The issue seemed to be that my boot partition seemed
+to have had its sector go bad, So, i threw another HDD into my laptop, and will reinstall Arch Linux at some point in the future. While
+this was an odd thing to do in an OPs class, I learnt a fair amount regarding how to use Live USBs to influence a system. I might look
+for a way to store keys aswell, so that this doesn't happen again, although that might be a pain, considering the sensitive nature of private
+keys.
+\section{Week 06}
+\subsection{Class 1}
+There was a big talk about potentially working from home soon, as well as a ticket that came in from the Media Analytics team, who
+wanted us to look for a solution to a visitor counter program for their project for when it goes live sometime this year. I had a little
+look around, but it seemed that most sites used a backend database to handle that, rather than an independant software solution. They
+said they would appreciate it if i keeped looking into it.
+\subsection{Class 2}
+With this Covid 19 Stuff getting somewhat serious, I spent all of today making sure I have the required Keys, and files so I can continue 
+working from home. I also fiddled around a little bit trying to get my AWS docker linking to work, although, I didn't have much luck, as 
+instead of it giving me a command, It gave me a key? I should probably sort this out after the break
+\section{Week 07}
+\subsection{Class 1}
+I spent today at home, working through some AWS setup. It is still an absolute hell to setup, with paths and conflicting docker instructions, 
+as well as multiple verions of the AWS terminal. I think I will work more on this later, as it is giving me a hell of a headache. Unfortunately
+i cannot progress to doing more stuff with Spinnaker, as i need an AWS setup to do so.
+\subsection{MidSemBreak}
+Over the Midsemester break, I worked on a website, https://staging.james-mckenzie.tech/ For this, I used an online CI/CD solution,
+called zeit, using a github bot called now. I mainly am doing this to get a better understanding of development workflow, and also so I
+have a portfolio of work for when I go out into the workforce and start looking for work.
+\subsection{Class 2}
+We are finally back from break! While its been fun, Im glad to get back into the swing of things. Today I had a chat to
+Amazon in regard to my account being locked for some reason. It turns out I had locked myself out of my account due to a number
+of unfortunate typos. Lets hope I can make some progress faster in the coming weeks, as i really need to complete my Spinnaker setup,
+as well as getting my AWS OPs certification. 
+
+\section{Week 08}
+Unfortunately, Due to working at the hospital, and a handful of classwork, I was unable to complete any OPs work this week. 
+
+
+
+
+
+\end{document}
