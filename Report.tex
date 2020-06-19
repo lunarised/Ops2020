@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Operations and Security report}
+\author{James McKenzie}
+
+\maketitle
+This are my observations and recommendations regarding the OPs group, both in regards to infrastructure and software services employed my the operations and
+security group
+\medskip
+As one of the senior members of the Operations and Security group, This semester i took on more of a leadership role in the maintanence of servers. 
+Overall, Server maintance proved very difficult this semester due to a multitude of reasons, and this report will summarise them and provide potential
+solutions on how to improve the infrastructure in the future.
+
+\section{Documentation}
+The Documentation going into this semester proved to be of little help in regards to helping us complete our tasks. There were a few reasons as to why
+the documentation deemed to be mostly useless for us, which I will detail below
+\subsection{Outdated Documentation}
+One of the biggest issues we encountered this semester were certs, and mainly, how to apply them to our servers. We could follow the documentation that tells us to 
+use certbot to generate the certs, howevewr, this didnt work due to apache being updated on the servers. Certbot was unable to connect to an apache webserver which I found interesting, as we were hosting a website on that server via an Apache web server. After a few days of trying to fix this, we had to resort to other methods
+to get the certificates on the server. 
+\subsection*{Solution}
+I believe at this point, The documentation requires a complete rewrite, as there were a handful of other parts of the documentation (such as our monitoring software 
+being different to what is documented) 
+I believe we are past the point of the documentation being enough to bandaid fix the servers until they are migrated online to the cloud, unless the migrations happen relatively soon.
+\subsection{Lack of server specific documentation}
+Something that made cert renewalls even harder than they should have been, was lack of documentation provided to us from other project groups. This made it very 
+difficult for us to install the certs in the correct place, as many of them were using different frameworks (Media Analytics using both Django and React in one project) This caused a huge delay in the first round of certificate installations, as a lot of the places where certs were to be stored were completely wrong in the documentation. 
+\subsection*{Solution}
+I would propose a shared wiki hosted by the ops group where all the seperate projects, using BITPlatform services, would host their wikis, so when the time comes for certificate renewals, We have read access to their documentation, and dont have to chase each group around trying to find where in their server to put the SSL certificate.
+
+\subsection{Lack of Documentation}
+The most infuriating thing I encountered this semester was the lack of documentation, specifically, regarding chain certificates.
+The servers would not work without them, and there was absolutely no documentation about the chain certificates, meaning I had to piece it together by hand.
+Im still unsure if i did it correctly, but it was working the first time i did my current method. I feel the lack of documentation may be a primary reason
+why the servers went down, as there may have been a task that I just forgot to do.
+
+\subsection*{Solution}
+Just have more documentation written and TEST the documentation by creating a virtual environment where a teammate can attempt to reproduce the task by robotically
+following the documentation. If they fail, The documentation is insufficient. 
+
+\section{Architecture}
+Hosting the documentation onsite is an interesting choice for the OPs department, as it allows us to get some physical access and gives us an opportunity to play
+with physical hardware. Although we had an issue this semester regarding it, namely that the storage was not working correctly. 
+This was an issue that was not solved at all through the semester, due to other problems arising, and noone really having much experience with physical diagnosis 
+or physical repairs on a machine. One error that was solved was a powersupply failure, although thats merely a footnote on the amount of work we had to do this year.
+\subsection{Solution: Moving to the Cloud}
+Moving the OP-BIT platform to a cloud provider such as AWS would be an interesting project to take on, but may be a solution to the fact that dealing with hardware
+is an unusual task for a member of the ops group (And not a task where information can be passed down effectively) The primary problems that I expect could arise 
+with moving the OP platform to the cloud, would be that potentially other projects would get confused with either AWS or Azure credentials, and potentially do something wrong and affect their whole project, where at the moment we have absolute control over the creation and deletion of servers (Which is both a blessing and a 
+curse). However, As i have little experience of hosting an Operations environment on the cloud, I am not entirely sure if my worries on this topic are justified. It would also give other project students a chance to learn a bit more about the OPs pipeline, as potentially, CI/CD services will be more avaliable to them.
+\subsection{Solution: More server education}
+Teaching students more about general IT Hardware maintanence and diagnosing could help illeviate this problem in the future. However, this seems outside the scope of
+the Operations group, and more of a general oversight in the BIT as a whole.
+
+\section{Ideas looking forward}
+Here I will write some ramblings on what I think the OPs team should prioritize going into next semester, in order to try and pull the Server Environment back
+on track. These are purely my ideas, and I am sure there are better ways to solve the inherint problems with the ops group
+\subsection{Either Retire or Move the gitlab server}
+While I think that gitlab should be retired in favour of Github classrooms or some other alternative. However, If we wanted to keep an onsite git instance, I would 
+recommend moving to gitea, or even just moving gitlab to a new server entirely. I think moving the server is a good idea as there are alot of issues that the 
+server is currently experiencing. This is likely due to several years of 6month rotations of admins, each doing things differently and making minor 
+mistakes each time. Some issues I noted on the gitlab server specifically were that Apache wasn't working as intended, which caused cert bot to not work as
+expected. I retried using certbot on my personal machine to certify james-mckenzie.tech and staging.james-mckenzie.tech, and confirmed that the problem was due to
+the servers environment. (NB, I have since moved these domains to a seperate hoster so I can use CD tools more easily with NOW). The Issues that may be encountered
+would be that gitlab is a somewhat strange setup with multiple drives, but im sure it would be managable
+
+\subsection{Redo ALL the documentation}
+The biggest issue we ran into this semester was with documentation. I think the documentation needs a complete overhaul, even down to using a different service other
+than gitlab (I don't think gitlab is a good tool to use as a wiki). There are several issues with the documentation which I have addressed above and i think
+the team could benefit greatly with an overhaul of these documents. 
+
+\subsection{Move to the Cloud}
+Moving to AWS, Azure, Digital Ocean, or Google Cloud are all good ideas moving forward for the ops team to think of transitioning to. This will mitigate the amount 
+of physical server problems, such as the NAS drives failing. It will also give the OPs group some real world experience on learning how to use the industry
+standards for platform maintanence. This will also allow the Ops group to use the inbuilt tools for Monitoring, further reducing the amount that can go wrong.
+And since the ops group is responsible for many of the other projects running smoothly, this is a big plus. 
+
+\subsection{Bigger Emphasis on Monitoring}
+From experience, I found that people weren't monitoring the servers as actively as they could have been. This is also true for the ticketing system. I barely ever
+checked the ticketing server, and only really did when i remembered about it. I think we could improve these workflows by having some sort of dashboard program that
+all members of the OPs group can see at any given time. A way that this could be achieved, Is to create a webpage or some other program that cretes a view that is 
+always visible to all the members in the project room, that shows the team both the number of Open, and New Tickets, but also some system diagnostics, showing us
+any errors or warnings that our monitoring software is spitting out. This could potentially be achieved as a Raspberry Pi project, as it is a great usecase to use a 
+pi. This would help us minimise downtime, as well as predict and prevent potential downtime for the servers. This could also be configured to serve as a notice
+board for the OPs group also. This could make a good group project in the future too for a programming team, or even for the OPs team
+
+
+
+\end{document}
