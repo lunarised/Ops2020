@@ -10,7 +10,7 @@
 This a portfolio of work that I have completed and intend to complete in Semester 1 of 2020, as part of my work in the 
 Operations and Security team in Project 2
 \medskip
-This semester, my primary goal is to complete some AWS certifications or some Azure certifications. Im mostly looking into the 
+This semester, my primary goal is to complete some AWS certifications or some Azure certifications. I'm mostly looking into the 
 Operations certifications, although some of the software engineering and security ones also look pretty good. My other goal
 is to get a better understanding of CI/CD and learn some CI/CD tools such as Spinnaker and Jenkins. This also gives me an opportunity
 to learn more of the Rust programming language, as that is one of the rising stars in programming; Being used by both Systems administrators,
@@ -36,7 +36,7 @@ the git issue is more important as many lecturers use gitlab to teach their clas
 
 \section{Week 02}
 \subsection{Class 1}
-Today, as faisal and matt were absent, I held a meeting with everyone just to see what everyone is interested in. We have
+Today, as Faisal and matt were absent, I held a meeting with everyone just to see what everyone is interested in. We have
 a lot of people interested in networking, which is a welcome change from neither me or Matt understanding the first thing about
 basic networks. It seems a fair few of them aren't overly comfortable in either Linux or Windows Server operating systems, which
 I guess they will learn as they work through the Ops group. I know that I definitely want to do something regarding CI/CD as a main
@@ -48,7 +48,7 @@ via the automatic authentication via the idp servers.
 Today was spent trying to diagnose some issues regarding gitlab, that I definitely over engineered. We had a message from a student
 letting me know that he could see a bunch of other repos. I spent about 4 hours trying to brute force find the cause of this, by checking
 file permissions and going through pages of bug reports on google regarding this issue. I then came to my senses, and checked what repos
-the student was supposed to be able to access, and then I found out that all students in his class were able to access eachothers repos, 
+the student was supposed to be able to access, and then I found out that all students in his class were able to access each others repos, 
 which seems to be the intended behaviour, so I spent the day just going on a wild goose chase looking for bugs and issues that weren't there
 
 \section{Week 03}
@@ -56,17 +56,17 @@ which seems to be the intended behaviour, so I spent the day just going on a wil
 Today Faisal talked to me about a CI/CD program called Spinnaker, which is one of the heavy hitters in the CI/CD world. I had a look
 through it today, and tried installing it on the Polytech computers. I ran into a large number of issues with the install, however, I did
 manage to install a package called Spinnaker on my laptop. It was about this time that I realised i was not doing the install right, as its
-supposed to be hosted on a cloud platform like AWS or Azure. I decided that I needeed to do some more research before i continued
+supposed to be hosted on a cloud platform like AWS or Azure. I decided that I needed to do some more research before i continued
 \subsection{Class 2}
-I did some of the Azure OPs certificate today, although I think we want to change to AWS, but I am sure some of the skills will be transferrable
+I did some of the Azure OPs certificate today, although I think we want to change to AWS, but I am sure some of the skills will be transferable
 \section{Week 04}
 \subsection{Class 1}
-This week faisal wanted us to get the Gitlab CI/CD working, which I gave a good attempt, although, I ran into some issues regarding
+This week Faisal wanted us to get the Gitlab CI/CD working, which I gave a good attempt, although, I ran into some issues regarding
 installing the runner. I also had to spend a while explaining exit codes to my other team members (explaining that all programs return
 an integer to the shell, a 0 if the program ran correctly, or a positive integer if the program exited) I think i will get it working next
 session though as i made a breakthrough with the gitlab runner.
 \subsection{Class 2}
-Today I got the gitlab runner working, turns out most of my issues were due to saving the gitlab runner into a drive that wasnt the 
+Today I got the gitlab runner working, turns out most of my issues were due to saving the gitlab runner into a drive that wasn't the 
 root drive (in this case C:/) and it didn't have access to the \$PATH for some reason or another. I then ran into the problem that my program
 would only ever return a success state, however, I fixed this by realising i am not as good at Python as i had expected. I then got bothered
 my Rob to try and fix the IDP certificates, so I did some more research on how Chain Files work, But I will try fix this next time I come in
@@ -82,18 +82,18 @@ one of us may be able to crack this problem.
 Personal Challenge Day! I managed to brick my laptop which had a large number of private keys that I need to access my personal servers.
 So I spent today utilising different methods to get the data off my laptop. A big issue is that I encrypt my data at an operating system
 level, which meant I needed to use my decrypting programs to get the data back. I achieved this by using a Live USB of Arch Linux (which
-coincidentally, is the Operating System that was on my latop), to set up a environment in ram, to mount my drives, do a decrypt on those
+coincidentally, is the Operating System that was on my laptop), to set up a environment in ram, to mount my drives, do a decrypt on those
 mount points, and then change the root into the original root of my operating system. The issue seemed to be that my boot partition seemed
 to have had its sector go bad, So, i threw another HDD into my laptop, and will reinstall Arch Linux at some point in the future. While
 this was an odd thing to do in an OPs class, I learnt a fair amount regarding how to use Live USBs to influence a system. I might look
-for a way to store keys aswell, so that this doesn't happen again, although that might be a pain, considering the sensitive nature of private
+for a way to store keys as well, so that this doesn't happen again, although that might be a pain, considering the sensitive nature of private
 keys.
 \section{Week 06}
 \subsection{Class 1}
 There was a big talk about potentially working from home soon, as well as a ticket that came in from the Media Analytics team, who
 wanted us to look for a solution to a visitor counter program for their project for when it goes live sometime this year. I had a little
-look around, but it seemed that most sites used a backend database to handle that, rather than an independant software solution. They
-said they would appreciate it if i keeped looking into it.
+look around, but it seemed that most sites used a back-end database to handle that, rather than an independent software solution. They
+said they would appreciate it if i kept looking into it.
 \subsection{Class 2}
 With this Covid 19 Stuff getting somewhat serious, I spent all of today making sure I have the required Keys, and files so I can continue 
 working from home. I also fiddled around a little bit trying to get my AWS docker linking to work, although, I didn't have much luck, as 
@@ -101,14 +101,14 @@ instead of it giving me a command, It gave me a key? I should probably sort this
 \section{Week 07}
 \subsection{Class 1}
 I spent today at home, working through some AWS setup. It is still an absolute hell to setup, with paths and conflicting docker instructions, 
-as well as multiple verions of the AWS terminal. I think I will work more on this later, as it is giving me a hell of a headache. Unfortunately
+as well as multiple versions of the AWS terminal. I think I will work more on this later, as it is giving me a hell of a headache. Unfortunately
 i cannot progress to doing more stuff with Spinnaker, as i need an AWS setup to do so.
 \subsection*{MidSemBreak}
-Over the Midsemester break, I worked on a website, https://staging.james-mckenzie.tech/ For this, I used an online CI/CD solution,
+Over the mid-semester break, I worked on a website, https://staging.james-mckenzie.tech/ For this, I used an online CI/CD solution,
 called zeit, using a github bot called now. I mainly am doing this to get a better understanding of development workflow, and also so I
 have a portfolio of work for when I go out into the workforce and start looking for work.
 \subsection{Class 2}
-We are finally back from break! While its been fun, Im glad to get back into the swing of things. Today I had a chat to
+We are finally back from break! While its been fun, I'm glad to get back into the swing of things. Today I had a chat to
 Amazon in regard to my account being locked for some reason. It turns out I had locked myself out of my account due to a number
 of unfortunate typos. Lets hope I can make some progress faster in the coming weeks, as i really need to complete my Spinnaker setup,
 as well as getting my AWS OPs certification. 
@@ -119,48 +119,88 @@ Unfortunately, Due to working at the hospital, and a handful of classwork, I was
 \subsection {Class 1}
 Today I decided I should try to make some further progress on the gitlab pages not working. I had a little prod around and discovered that
 the apache instance for the gitlab pages was not working. It took me a handful of attempts, but I managed to get the gitlab pages back 
-online, probably after around 4 hours of work. It is hard doing work in lockdown, and it's quite strange not having access to all the materials
+online, probably after around 4 hours of work. It is hard doing work in lock-down, and it's quite strange not having access to all the materials
 and keys as readily as I do while in the classroom, but i guess i should try and make the best of it!
 \section{Week 10}
 \subsection{Class 1}
-Today Cartur came up to me, and asked me what I knew about the IDP server. As I had previously wressled with the IDP server in order to get
+Today Cartur came up to me, and asked me what I knew about the IDP server. As I had previously wrestled with the IDP server in order to get
 gitlab back online, I decided I could try an point him to some files on the Gitlab server that helped me get a basic understanding of IDP. We had 
-a sitdown and discussed the alternatives to using IDP, as I have found it to be too unwieldy in regards to using it; Although in heinsight, that
+a sit down and discussed the alternatives to using IDP, as I have found it to be too unwieldy in regards to using it; Although in hindsight, that
 may stem from my endless frustration with lack of documentation of the IDP system with the gitlab server.
 \subsection{Class 2}
 Today I tried to continue to do some of my AWS certification, but I still was having issues getting my docker account linked to my AWS account. So instead
-of wresseling with it for another hour or two, I decided to use the free Digital Ocean credit given to me from github student to create a 5 dollars per month server
+of wrestling with it for another hour or two, I decided to use the free Digital Ocean credit given to me from github student to create a 5 dollars per month server
 and to set up some administration programs on it, and have it talk to my other server. I decided to try and work out how chef works, as well as setting up
 nagios, which I have a small understanding of, due to the Systems administration paper. I managed to get nagios working somewhat smoothly, although I had some
-big issues working out how Chef works, mainly due to some documnetation being a little hard to read and digest. I might have to wait until we can go back
+big issues working out how Chef works, mainly due to some documentation being a little hard to read and digest. I might have to wait until we can go back
 to class before I get my AWS setup because nothing seems to be working right for me with it.
 
 \section{Week 11}
 \subsection{Class 1}
 Today I talked to the rest of my group RE the servers, in order to try and figure out who I should teach to manage the certificates next semester. It seemed that
-Scott was very interested in this (He replied a day later) So we decided we will try to sort the certs out on Thursday. Im a little worried at the majority of 
+Scott was very interested in this (He replied a day later) So we decided we will try to sort the certs out on Thursday. I'm a little worried at the majority of 
 the groups silence on these issues, as the documentation for doing the certs doesn't seem to be currently correct, and i would rather not have to spend a lot of 
 time trying to fix certbot at the end of the semester, so instead I want to opt in to doing a manual certification system, as this would allow more people to get 
 hands on experience in how certification works.
 
 \subsection{Class 2}
-Today scott and I were going to work on the certificates, although I felt quite ill today and cancelled on him. I instead did some research into web assembly, as I 
+Today Scott and I were going to work on the certificates, although I felt quite ill today and cancelled on him. I instead did some research into web assembly, as I 
 want to make a personal project in the future that emulates an enigma machine, although I want it to be portable, which leaves me with 2 options, either I write
 it in web assembly, or I write it in Java/Python. 
 
 \section{Week 12}
 \subsection{Class 1}
-Today I recieved a teams message from Yan Dong in the machine learning team, informing me of some problems with Pop OS's package management. She was habving trouble 
+Today I received a teams message from Yan-Dong in the machine learning team, informing me of some problems with Pop OS's package management. She was having trouble 
 installing some of the packages that she needed to move on to the next stage in her project. I had a poke around but I couldn't figure out a solution. I asked Matt
-to give it another lookover for me, as he also knows his way around linux package managers quite well, and neither of us could determine the problem. I will look
-for solutions over the coming days, as potentially it may be an issue for other PopOS users, and maybe one of them can provide us with a fix.
+to give it another look over for me, as he also knows his way around Linux package managers quite well, and neither of us could determine the problem. I will look
+for solutions over the coming days, as potentially it may be an issue for other Pop-OS users, and maybe one of them can provide us with a fix.
 
 \subsection{Class 2}
-A fix was found on this day. After doing some gogling, and nearly giving up hope, I read a stackoverflow post that was a few years old, of a similar error on
+A fix was found on this day. After doing some googling, and nearly giving up hope, I read a stack overflow post that was a few years old, of a similar error on
 Ubuntu. It said that I needed to add more sources to the sources list file. I used this command (sudo sed -ie 's|eoan|disco|g' /etc/apt/sources.list) and I manged to
-fix the dependancy problem. Ofcourse before i did this, I read the majority of the SED manpage so i knew more or less what I was doing.
+fix the dependency problem. Of course before i did this, I read the majority of the SED man-page so i knew more or less what I was doing.
 
 \section{Week 13}
-
+\subsection{Class 1}
+Today, Scott and I attempted to fix the certificates, however we ran into a couple of problems. Namely that the company we were getting our certificates from, 
+was now charging for wild-card certificates. While we could go about and create separate certs for all of our subdomains individually, I do not know the unintended
+side effects that may occur. I have informed Rob and he is looking for solution for this problem
+\subsection{Class 2}
+Today Rob asked if i could get certbot working before he asked for approval for funding of a wildcard cert. So today i spend a fair amount of time on the gitlab
+server trying to configure the certbot to play nice with the gitlab environment. Unfortunately i was unable to do so. For some reason, It thought that apache was not
+available or even running on the server. I confirmed that apache was running via 2 methods. I did a ps -ea |grep apache2 to check that apache2 was a running process.
+I also followed up this check with a systemctl status apache2 to confirm that a) apache was running correctly, IE, the status via systemd was running, and b) that 
+apache was set to run at startup, just in case there was any issues. I even restarted apache via systemd to double check that it was running. All of the online
+questions on similar topics seemed to be completely irrelevant to the problems I was having. I fired up the extra digital ocean server i got from github student, and
+installed certbot on there, hosting test.james-mckenzie.tech, to which, i managed to get a certificate on that server via certbot. So my current thoughts are just
+that the gitlab server is just in such an odd state of disrepair that we will no longer be able to generate certs on it. Rob ended up supplying me with a wild-card cert, and I installed it with Stefan across all the servers we needed it on. 
+\section{Week 14}
+This week was horrible as all the servers died at once. I got a message from Liam from the media analytics team asking if there was some kind of uncommunicated
+maintainance going on, which i said there was none. I then rushed into Polytech to try and figure out the issue. I created a media-analytics.op-bit.nz certificate to
+put on the webpage (in case the wild-card cert was to blame) but as I was doing that, all of the other servers began to go down, citing a 502 error, meaning there was
+something wrong with the gateway. I double checked that the cert was correctly added to the gateway, which it was. The media-analytic.op-bit.nz was showing a correct
+cert, but unfortunately, a 502 error was still showing. I called in Rob and we sat looking at the error, poking around the server, trying to work out what was going
+on with the 502. Unfortunately neither of us could work it out. There really isn't much for me to write about this week, as it was mainly me poking around the server
+and googling possible reasons as to why the servers have gone down.
+\section{Week 15}
+\subsection{Class 1}
+David wanted to move the Media Analytics website off of the BIT platform, So Liam and Trent wanted me to help them with finding a new platform for Davids research.
+The hard part about this task, was we had to accommodate the REDIS storage that the project required, which unfortunately, Is very expensive when being rented from
+any of the big cloud computing providers such as AWS or Digital Ocean. I also spent a bit more time working out what may be going wrong with the gateway. I double
+checked the IIS server, even though I'm not sure what it does. The Media Analytics teams server also broke while i was doing that, but it broke completely differently
+to how all the other server broke. They were uploading Davids media data to their servers, when it started being very slow. They rebooted it, but could no longer SSH into it. I think there are 2 potential issues that they ran into. 1) That SSH was not enabled on startup, which has been the case for some servers for some reason,
+or 2) That the gateway servers DHCP client was unable to give out their IP address again as it was down. Unfortunately, I can not fix this issue until the gateway
+is fixed anyway, due to the virtualisation platform being inaccessible due to the 502. I will put this on the back burner for now, as they are perfectly able to
+continue working on their work without the server at the moment.
+\subsection{Class 2}
+Today I was continuing with some ideas to help the media analytics team move their servers off the OP-Platform domain, where rob asked me if I had taken a chance
+at working out what is wrong with the NAS servers upstairs. I tried working it out earlier in the year, but it was too big of a job for me to do at the time,
+and i had forgotten to give it another chance. Regan and I went upstairs to see what we could sort out. We noticed a slight clicking noise coming from one of the NAS
+servers, and after a few seconds of thinking, we decided that it was coming from one of the NAS power supplies. We think the clicking was coming from the transformer
+inside the power supply shorting out. We put the server on redundant power, and changed the power supply port we were using. We still couldn't find out what the issue 
+with the NAS servers were in the end, which was a little bit upsetting, but i guess you can't win them all
+\section{Week 16}
+I have done very little this week aside from writing up my Portfolio and Report. I have continued to spend a few hours here and there to try and figure out
+why the gateway is down, But I haven't been very successful with it.
 
 \end{document}
