@@ -117,8 +117,50 @@ as well as getting my AWS OPs certification.
 Unfortunately, Due to working at the hospital, and a handful of classwork, I was unable to complete any OPs work this week. 
 \section{Week 09}
 \subsection {Class 1}
+Today I decided I should try to make some further progress on the gitlab pages not working. I had a little prod around and discovered that
+the apache instance for the gitlab pages was not working. It took me a handful of attempts, but I managed to get the gitlab pages back 
+online, probably after around 4 hours of work. It is hard doing work in lockdown, and it's quite strange not having access to all the materials
+and keys as readily as I do while in the classroom, but i guess i should try and make the best of it!
+\section{Week 10}
+\subsection{Class 1}
+Today Cartur came up to me, and asked me what I knew about the IDP server. As I had previously wressled with the IDP server in order to get
+gitlab back online, I decided I could try an point him to some files on the Gitlab server that helped me get a basic understanding of IDP. We had 
+a sitdown and discussed the alternatives to using IDP, as I have found it to be too unwieldy in regards to using it; Although in heinsight, that
+may stem from my endless frustration with lack of documentation of the IDP system with the gitlab server.
+\subsection{Class 2}
+Today I tried to continue to do some of my AWS certification, but I still was having issues getting my docker account linked to my AWS account. So instead
+of wresseling with it for another hour or two, I decided to use the free Digital Ocean credit given to me from github student to create a 5 dollars per month server
+and to set up some administration programs on it, and have it talk to my other server. I decided to try and work out how chef works, as well as setting up
+nagios, which I have a small understanding of, due to the Systems administration paper. I managed to get nagios working somewhat smoothly, although I had some
+big issues working out how Chef works, mainly due to some documnetation being a little hard to read and digest. I might have to wait until we can go back
+to class before I get my AWS setup because nothing seems to be working right for me with it.
 
+\section{Week 11}
+\subsection{Class 1}
+Today I talked to the rest of my group RE the servers, in order to try and figure out who I should teach to manage the certificates next semester. It seemed that
+Scott was very interested in this (He replied a day later) So we decided we will try to sort the certs out on Thursday. Im a little worried at the majority of 
+the groups silence on these issues, as the documentation for doing the certs doesn't seem to be currently correct, and i would rather not have to spend a lot of 
+time trying to fix certbot at the end of the semester, so instead I want to opt in to doing a manual certification system, as this would allow more people to get 
+hands on experience in how certification works.
 
+\subsection{Class 2}
+Today scott and I were going to work on the certificates, although I felt quite ill today and cancelled on him. I instead did some research into web assembly, as I 
+want to make a personal project in the future that emulates an enigma machine, although I want it to be portable, which leaves me with 2 options, either I write
+it in web assembly, or I write it in Java/Python. 
+
+\section{Week 12}
+\subsection{Class 1}
+Today I recieved a teams message from Yan Dong in the machine learning team, informing me of some problems with Pop OS's package management. She was habving trouble 
+installing some of the packages that she needed to move on to the next stage in her project. I had a poke around but I couldn't figure out a solution. I asked Matt
+to give it another lookover for me, as he also knows his way around linux package managers quite well, and neither of us could determine the problem. I will look
+for solutions over the coming days, as potentially it may be an issue for other PopOS users, and maybe one of them can provide us with a fix.
+
+\subsection{Class 2}
+A fix was found on this day. After doing some gogling, and nearly giving up hope, I read a stackoverflow post that was a few years old, of a similar error on
+Ubuntu. It said that I needed to add more sources to the sources list file. I used this command (sudo sed -ie 's|eoan|disco|g' /etc/apt/sources.list) and I manged to
+fix the dependancy problem. Ofcourse before i did this, I read the majority of the SED manpage so i knew more or less what I was doing.
+
+\section{Week 13}
 
 
 \end{document}
